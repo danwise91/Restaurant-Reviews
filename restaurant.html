@@ -2,10 +2,11 @@
 <html>
 
 <head>
-  <!-- Normalize.css for better cross-browser consistency -->
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
   <link rel="stylesheet" src="//normalize-css.googlecode.com/svn/trunk/normalize.css" />
-  <!-- Main CSS file -->
-  <link rel="stylesheet" href="css/styles.css" type="text/css">
+  <link rel="stylesheet" href="css/styles.css">
+
   <title>Restaurant Info</title>
 </head>
 
@@ -14,11 +15,12 @@
   <header>
     <!-- Beginning nav -->
     <nav>
-      <h1><a href="/">Restaurant Reviews</a></h1>
+      <h1 label="link" aria-label="Link To Home Page"><a href="/">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
+    <label aria-label="Breadcrumb" for="breadcrumb"></label>
     <ul id="breadcrumb" >
-      <li><a href="/">Home</a></li>
+      <li ><a label="link" aria-label="Link To Home Page" href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
     <!-- End nav -->
@@ -28,8 +30,8 @@
   <!-- Beginning main -->
   <main id="maincontent">
     <!-- Beginning map -->
-    <section id="map-container">
-      <div id="map"></div>
+    <section id="map-container" alt="Area Map">
+      <div role="Application" aria-label="Map of Choosen Restaurant" id="map"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
@@ -61,7 +63,7 @@
   <!-- Main javascript file -->
   <script type="text/javascript" src="js/restaurant_info.js"></script>
   <!-- Google Maps -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=<API_KEY_HERE>&libraries=places&callback=initMap"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHnSoLcwGz4AdnX2Ne3P-xvKWq5iBu9HM&libraries=places&callback=initMap"></script>
   <!-- End scripts -->
 
 </body>

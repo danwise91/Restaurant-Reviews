@@ -30,7 +30,7 @@ fetchNeighborhoods = () => {
  * Set neighborhoods HTML.
  */
 fillNeighborhoodsHTML = (neighborhoods = self.neighborhoods) => {
-  const select = document.getElementById('neighborhoods-select');
+  const select = document.getElementById('neighborhoods-select').focus();
   neighborhoods.forEach(neighborhood => {
     const option = document.createElement('option');
     option.innerHTML = neighborhood;
