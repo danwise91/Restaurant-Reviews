@@ -15,12 +15,12 @@
   <header>
     <!-- Beginning nav -->
     <nav>
-      <h1 label="link" aria-label="Link To Home Page"><a href="/">Restaurant Reviews</a></h1>
+      <h1 label="link" aria-label="Link To Home Page"><a href="/" tabindex="1">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
     <label aria-label="Breadcrumb" for="breadcrumb"></label>
     <ul id="breadcrumb" >
-      <li ><a label="link" aria-label="Link To Home Page" href="/">Home</a></li>
+      <li ><a label="link" aria-label="Link To Home Page" href="/" tabindex="2">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
     <!-- End nav -->
@@ -30,12 +30,12 @@
   <!-- Beginning main -->
   <main id="maincontent">
     <!-- Beginning map -->
-    <section id="map-container" alt="Area Map">
+    <section id="map-container" alt="Area Map" tabindex="-1">
       <div role="Application" aria-label="Map of Choosen Restaurant" id="map"></div>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
-    <section id="restaurant-container">
+    <section id="restaurant-container" tabindex="3">
       <h1 id="restaurant-name"></h1>
       <img id="restaurant-img">
       <p id="restaurant-cuisine"></p>
@@ -45,7 +45,7 @@
     <!-- end restaurant -->
     <!-- Beginning reviews -->
     <section id="reviews-container">
-      <ul id="reviews-list"></ul>
+      <ul id="reviews-list" tabindex="4"></ul>
     </section>
     <!-- End reviews -->
   </main>
@@ -53,7 +53,7 @@
 
   <!-- Beginning footer -->
   <footer id="footer">
-    Copyright (c) 2017 <a href="/"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
+    Copyright (c) 2017 <a href="/" tabindex="5"><strong>Restaurant Reviews</strong></a> All Rights Reserved.
   </footer>
   <!-- End footer -->
 
