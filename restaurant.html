@@ -14,14 +14,13 @@
   <!-- Beginning header -->
   <header>
     <!-- Beginning nav -->
-    <nav>
+    <nav aria-label="Breadcrumb" for="breadcrumb">
       <h1 label="link" aria-label="Link To Home Page"><a href="/" tabindex="1">Restaurant Reviews</a></h1>
-    </nav>
     <!-- Beginning breadcrumb -->
-    <label aria-label="Breadcrumb" for="breadcrumb"></label>
     <ul id="breadcrumb" >
       <li ><a label="link" aria-label="Link To Home Page" href="/" tabindex="2">Home</a></li>
-    </ul>
+      </ul>
+    </nav>
     <!-- End breadcrumb -->
     <!-- End nav -->
   </header>
@@ -63,10 +62,10 @@
   <!-- Main javascript file -->
   <script type="text/javascript" src="js/restaurant_info.js"></script>
   <!-- Google Maps -->
-  <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHnSoLcwGz4AdnX2Ne3P-xvKWq5iBu9HM&libraries=places&callback=initMap"></script>
+  <script async defer src="https://maps.googleapis.com/maps/api/js?key=XXX&libraries=places&callback=initMap"></script>
 
   <!-- Service Worker -->
-  <script type="application/javascript" charset="utf-8"  src="js/service-worker.js"></script>
+  <script type="application/javascript" charset="utf-8" src="app.js"></script>
   <!-- End scripts -->
 
 </body>

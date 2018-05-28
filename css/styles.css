@@ -32,7 +32,7 @@ h1, h2, h3, h4, h5, h6 {
   margin: 0 0 20px;
 }
 article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-	display: auto;
+	display: block;
 }
 #maincontent {
   background-color: #f3f3f3;
@@ -105,11 +105,17 @@ nav h1 a {
   background-color: #ccc;
 }
 /* ====================== Restaurant Filtering ====================== */
+#nh-select,
+#cs-select {
+  display: none;
+}
+
 .filter-options {
   width: 100%;
   height: 100%;
   background-color: #3397DB;
   align-items: center;
+  box-sizing: border-box;
 }
 .filter-options h2 {
   color: white;
@@ -143,12 +149,11 @@ nav h1 a {
 }
 #restaurants-list li {
   background-color: #fff;
-  border: 2px solid #ccc;
-  font-family: Arial,sans-serif;
-  margin: 15px;
-  min-height: 380px;
-  padding: 0 30px 25px;
-  text-align: left;
+  font-family: Arial, sans-serif;
+  margin: 5px;
+  box-sizing: border-box;
+  border-radius: 2.5%;
+  padding-bottom: 5px;
 }
 #restaurants-list .restaurant-img {
   background-color: #ccc;
@@ -187,7 +192,7 @@ nav h1 a {
 /* ====================== Restaurant Details ====================== */
 .inside header {
   /*position: inline;*/
-  position: absolute;
+  position: fixed;
   top: 0;
   width: 100%;
   z-index: 1000;
@@ -222,7 +227,7 @@ nav h1 a {
   line-height: 1.1;
 }
 #restaurant-img {
-	max-width: 100%;
+	width: 100%;
   height: auto;
   border-radius: 2.5%;
 }
@@ -240,15 +245,14 @@ nav h1 a {
   padding: 2px 0;
   text-align: center;
   text-transform: uppercase;
-	width: 100%;
+	width: 220px;
 }
 #restaurant-container, #reviews-container {
   border-bottom: 1px solid #d9d9d9;
   border-top: 1px solid #fff;
-  padding: 140px 40px 30px;
-  display: block;
+  padding: 190px 40px 30px;
+  display: auto;
 }
-
 
 #restaurant-container{
   margin: 350px auto 0;
@@ -297,9 +301,8 @@ p:nth-child(2) {
 }
 
 p:nth-child(3) {
-    background-color: orange;
+    background-color: blue;
     display: flex;
-    flex-wrap: wrap;
     color: white;
     font-weight: bold;
     width: 30%;
@@ -307,42 +310,55 @@ p:nth-child(3) {
     padding: 5px 5px 5px 10px;
 }
 
-/*small devices like the Nexus 5*/
-@media only screen and (max-width: 600px)
-{
-  .inside #map {
-    height: 78%;
-  }
-  #restaurant-list li{
-    flex: 1 0 120%;
+
+/* Extra small devices */
+
+@media only screen and (max-width: 600px) {
+  #reviews-list li {
+    width: 100%;
   }
 
   #restaurant-container {
-    flex: 1 0 100%;
-  }
-
-  #reviews-list li {
-    flex: 1 0 100%;
+    margin: 100px auto 0;
   }
   
 }
 
-/*Ipad screens or larger*/
-@media only screen and (min-width: 768px)
-{
-  #restaurant-list li{
-    flex: 1 0 50%;
+/* Medium devices */
+
+@media only screen and (min-width:768px) {
+  #reviews-list li {
+    flex: 1 0 40%;
   }
 
   #restaurant-container {
-    flex: 1 0 100%;
-  }
-
-  #reviews-list li {
-    flex: 1 0 50%;
+    margin: 300px auto 0;
+    margin-left: 10px;
   }
 
   #footer{
-    width: 94%;
+    width: 95%;
   }
 }
+
+/* Extra large devices */
+
+@media only screen and (min-width: 800px) {
+  #restaurant-container {
+    margin: 150px auto 0;
+    margin-left: 100px;
+  }
+
+  #footer{
+    width: 95%;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  #restaurants-list li {
+    margin-left: 100px;
+    flex: 1 0 33%;
+  }
+
+}
+
